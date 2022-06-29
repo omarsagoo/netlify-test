@@ -4,5 +4,8 @@ mkdir -p "$(pwd)/functions"
 GOBIN=$(pwd)/functions 
 go install ./...
 str="$(pwd)"/functions/*
-chmod +x "$str"
+find "$(dirname "$str")" -name "$(basename "$str")" 2>/dev/null | while read file
+do
+  chmod +x "$file"
+done
 go env
