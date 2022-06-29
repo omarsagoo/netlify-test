@@ -63,7 +63,7 @@ func main() {
 		return c.HTML(http.StatusOK, fmt.Sprintf("<p>File %s uploaded successfully.</p>", r.Comment))
 	})
 
-	e.Static("/serve", "builds")
+	e.Static("/", "builds/roll-a-ball")
 
 	e.Logger.Fatal(e.Start(":8080"))
 }
