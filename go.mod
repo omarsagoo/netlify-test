@@ -1,4 +1,4 @@
-module mc-pages
+module github.com/omarsagoo/netlify-test
 
 go 1.18
 

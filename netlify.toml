@@ -1,0 +1,11 @@
+[build]
+  command = "go run main.go"
+
+[[plugins]]
+package = "@netlify/plugin-sitemap"
+
+  [plugins.inputs]
+  buildDir = ""
+[build.environment]
+  GO_IMPORT_PATH="github.com/omarsagoo/netlify-test"
+  GO_VERSION="1.18"
